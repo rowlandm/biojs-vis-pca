@@ -2,24 +2,29 @@
 var app = require("biojs-vis-pca");
 
 //metaData contains different options
-var metaData = {"option1": ["Candidate", "Non-Candidate"]};
+var metaData = {"Candidate": ["Candidate", "Non-Candidate"]};
 
 //set default values for color domain, xDomain, yDomain and colorOption
-var colorDomain = metaData.option1;
-var colorOption = "option1";
+var colorDomain = metaData.Candidate;
+var colorOption = "Candidate";
 
 var body = document.getElementsByTagName("body")[0];
 
+xDomain = "x_value";
+yDomain = "y_value";
 
 var tooltip = d3.tip()
     .attr("class", "d3-tip")
     .offset([0, +110])
     .html(function(d){
-        gene = d.gene;
+        name = d.Protein_Name;
+        id = d.Unique_ID;
+        candidate = d.Candidate;
         component1 = d[xDomain];
         component2 = d[yDomain];
-        temp = "gene: " + gene + "<br/>" +
-               component1 + ", " + component2
+        temp = "Protein: " + name + " (" + id + ") <br/>" +
+               "-Log10 Q Value: " + component1 + " <br/> " + 
+               "Log 2 Fold Change: " + component2;
         return temp;
     });
 
@@ -33,15 +38,15 @@ d3.tsv("../data/volcano_demo.tsv", function(error, data) {
       target = rootDiv;
       var options = {
         colorOption: colorOption,
-        xDomain: "x_value",
-        yDomain: "y_value",
+        xDomain: xDomain,
+        yDomain: yDomain,
         metaData: metaData,
         circle_radius: 3,
         data: data,
         height: 600,
         width: 960,
-        colorDomain: metaData.option1, //this is the domain for color scale
-        domain_colors: ["blue", "red"],
+        colorDomain: metaData.Candidate, //this is the domain for color scale
+        domain_colors: ["red", "grey"],
         margin: {
           top: 80,
           right: 20,
