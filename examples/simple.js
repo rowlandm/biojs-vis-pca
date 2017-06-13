@@ -45,6 +45,8 @@ d3.tsv("../data/volcano_demo.tsv", function(error, data) {
         data: data,
         height: 600,
         width: 960,
+        log_2_fold_change_threshold: 0.6,
+        neg_log_10_Q_value_threshold: 1.2,
         colorDomain: metaData.Candidate, //this is the domain for color scale
         domain_colors: ["red", "grey"],
         margin: {
