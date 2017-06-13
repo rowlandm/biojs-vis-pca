@@ -1,5 +1,5 @@
 // if you don't specify a html file, the sniper will generate a div with id "rootDiv"
-var app = require("biojs-vis-pca");
+var app = require("biojs-vis-volcano");
 
 //metaData contains different options
 var metaData = {"Candidate": ["Candidate", "Non-Candidate"]};
@@ -23,6 +23,7 @@ var tooltip = d3.tip()
         component1 = d[xDomain];
         component2 = d[yDomain];
         temp = "Protein: " + name + " (" + id + ") <br/>" +
+               "Candidate: " + candidate + " <br/> " + 
                "-Log10 Q Value: " + component1 + " <br/> " + 
                "Log 2 Fold Change: " + component2;
         return temp;

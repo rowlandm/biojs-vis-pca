@@ -1,6 +1,6 @@
 Protein_Name	Unique_ID	Log2_Fold_Change	Neg_Log_10_Q_Value	Candidate
 ALBU_BOVIN	P02769	-0.8	17	Candidate
 ALBU_HUMAN	P02768	-1.1	16	Candidate
-CAS1_BOVIN	P02662	-6	0.6	Candidate
+CAS1_BOVIN	P02662	-6	1.6	Candidate
 1B67_HUMAN	Q29836	1.1	2	Candidate
 AATC_HUMAN	P17174	0.5	31	Non-Candidate

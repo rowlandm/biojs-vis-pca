@@ -1,27 +1,27 @@
 {
-  "name": "biojs-vis-pca",
-  "description": "a biojs visulization component for pca",
-  "version": "0.1.0",
-  "homepage": "https://github.com/tingxuanz/biojs-vis-pca",
+  "name": "biojs-vis-volcano",
+  "description": "a biojs visulization component for volcano [prototype]",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rowlandm/biojs-vis-volcano",
   "author": {
-    "name": "tingxuan zhang",
-    "email": "zhangtx93@gmail.com"
+    "name": "Rowland Mosbergen",
+    "email": "rowland@stemformatics.org"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tingxuanz/biojs-vis-pca.git"
+    "url": "git://github.com/rowlandm/biojs-vis-volcano.git"
   },
   "bugs": {
-    "url": "https://github.com/tingxuanz/biojs-vis-pca/issues"
+    "url": "https://github.com/rowlandm/biojs-vis-volcano/issues"
   },
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "scripts": {
 		"test": "echo 'Error: no test specified' && exit 1",
-		"build": "mkdirp build && browserify -r ./:biojs-vis-pca -o build/test.js",
+		"build": "mkdirp build && browserify -r ./:biojs-vis-volcano -o build/test.js",
 		"build-browser": "npm run build",
 		"prepublish": "npm run build",
-		"watch": "watchify -r ./:biojs-vis-pca -v -o build/test.js",
+		"watch": "watchify -r ./:biojs-vis-volcano -v -o build/test.js",
 		"w": "prunner \"npm run sniper\" \"npm run watch\"",
 		"sniper": "sniper ."
   },
@@ -44,5 +44,5 @@
     "snippets": ["examples"],
     "first": "simple"
    },
-  "keywords": ["biojs","biojs"]
+  "keywords": ["biojs","Stemformatics"]
 }
